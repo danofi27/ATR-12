@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: "Daca folositi acest cod, citati lucrarea si acest pachet."
+title: "ART-12D: Akashic Resonance Theory in 12 Dimensions - simulation code"
+abstract: >-
+  Cod de simulare care insoteste preprintul ART-12D v30: spectru Kaluza-Klein,
+  câmpul constitintei, informatie integrata, cuplaj Yukawa, hyperscanning EEG,
+  cuplajul cuvant-camp si un audit numeric al afirmatiilor din lucrare.
+authors:
+  - family-names: Ofiteru
+    given-names: Daniel
+    affiliation: Independent Researcher
+version: 1.0.0
+date-released: "2026-10-17"
+license: MIT
+keywords:
+  - consciousness
+  - dark matter
+  - Kaluza-Klein
+  - integrated information theory
+  - speculative physics
+references:
+  - type: generic
+    title: "Akashic Resonance Theory in 12 Dimensions (v31.0)"
+    authors:
+      - family-names: Ofiteru
+        given-names: Daniel
+    year: 2026
+    notes: Speculative preprint, unpublished
