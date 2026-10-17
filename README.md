@@ -5,9 +5,16 @@ relations of Part II of the paper, runs the experiments proposed in Part V on
 synthetic data, and produces a **numerical audit** of the paper's quantitative
 claims.
 
-**Current paper: version 31.0** — [RO](./ATR_12_v31_RO.pdf) · [EN](./ATR_12_v31_EN.pdf) ·
-[DE](./ATR_12_v31_DE.pdf) · [FR](./ATR_12_v31_FR.pdf). Sources in [`paper/`](./paper);
-version 30 PDFs are kept in [`archive/v30/`](./archive/v30) for reference only.
+**Current paper: version 31.0**
+
+- **Romanian (complete):** [ATR_12_v31_RO.pdf](./ATR_12_v31_RO.pdf) — 41 pages, built from
+  [ATR_12_v31_RO.tex](./ATR_12_v31_RO.tex), which is the full v30 text with the ten
+  corrections, the new sections and the seven figures. Ready to edit on Overleaf.
+- **Condensed versions (19 pages):** [EN](./ATR_12_v31_EN.pdf) · [DE](./ATR_12_v31_DE.pdf) ·
+  [FR](./ATR_12_v31_FR.pdf) · [ES](./ATR_12_v31_ES.pdf) · [IT](./ATR_12_v31_IT.pdf) —
+  Markdown sources in [`paper/`](./paper). They will be regenerated from the full
+  LaTeX master once the Overleaf edit is final.
+- Version 30 PDFs are untouched at the project root ([RO](./ATR_12_v30_RO.pdf) etc.).
 
 Version 31 applies the audit: ten numerical statements of v30 are corrected,
 two are downgraded to untestable conjectures, and a structural tension with
@@ -126,8 +133,9 @@ ATR-12/
 ├── tests/                  # 31 tests
 ├── figures/                # generated on every run
 ├── results/                # generated, git-ignored
-├── archive/v30/            # superseded PDFs
-└── ATR_12_v31_*.pdf        # current paper
+├── ATR_12_v31_RO.tex       # full Romanian LaTeX source (Overleaf)
+├── ATR_12_v31_*.pdf        # current papers
+└── ATR_12_v30_*.pdf        # previous version, untouched
 ```
 
 ## Limitations

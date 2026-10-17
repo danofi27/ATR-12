@@ -84,17 +84,35 @@ The repository is already initialised with a single commit on `main`.
 
 ## 7. Rebuilding the PDFs
 
-The papers are Markdown sources in [`paper/`](./paper), compiled by Edge:
+### Romanian — full LaTeX version (Overleaf)
+
+`ATR_12_v31_RO.tex` is the complete paper: the whole v30 text, the ten
+corrections applied, the new sections (numeric spectrum, compactification
+tension, power analysis, audit) and the seven figures.
+
+To edit it on Overleaf:
+
+1. **New Project → Upload Project**, and upload `ATR_12_v31_RO.tex` **and** the
+   `figures/` folder (the seven PNGs are referenced as `figures/figXX_*.png`).
+2. Set it as the main document (Menu → Main document).
+3. **Compiler:** XeLaTeX is recommended (correct Romanian ș/ț). pdfLaTeX also
+   works — the preamble switches automatically via the `iftex` package.
+4. Compile. The reference build is 41 pages.
+
+### Other languages — Markdown pipeline
+
+The DE/FR/ES/IT versions are currently the condensed Markdown sources in
+[`paper/`](./paper), built with Edge:
 
 ```bat
-python paper\build_paper.py paper\paper_v31_ro.md --lang RO
-python paper\build_paper.py paper\paper_v31_en.md --lang EN
 python paper\build_paper.py paper\paper_v31_de.md --lang DE
 python paper\build_paper.py paper\paper_v31_fr.md --lang FR
+python paper\build_paper.py paper\paper_v31_es.md --lang ES
+python paper\build_paper.py paper\paper_v31_it.md --lang IT
 ```
 
-Outputs: `ATR_12_v31_<LANG>.pdf` in the project root. Available today: RO, EN,
-DE, FR. Still to translate from the v31 master: ES, IT, RU, JP, CN.
+Outputs: `ATR_12_v31_<LANG>.pdf`. They will be regenerated from the full LaTeX
+master once the Overleaf edit is final.
 
 To add a language, copy `paper_v31_en.md` to `paper_v31_<lang>.md`, translate the
 text (do **not** touch the `$$...$$` blocks or the image paths), and run the
