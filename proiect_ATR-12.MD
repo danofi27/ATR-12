@@ -146,9 +146,9 @@ as written. They are listed with the exact section and recomputed value in
 ## 10. Open items
 
 - [x] License file (MIT) committed.
-- [x] Corrected paper v31 in RO and EN, with figures, in `paper/`.
+- [x] Corrected paper v31 in RO, EN, DE and FR, with figures, in `paper/`.
 - [x] `check.py` verification harness and `PUBLISHING.md`.
-- [ ] Translations DE/FR/IT/ES/RU/JP/CN rebuilt from the v31 master.
+- [ ] Translations ES, IT, RU, JP, CN rebuilt from the v31 master.
 - [ ] Language of the final paper (v31 exists in RO and EN).
 - [ ] Whether the 313 predictions are listed in full or the claim is reformulated.
 - [ ] Remote repository and Zenodo DOI.

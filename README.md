@@ -5,8 +5,8 @@ relations of Part II of the paper, runs the experiments proposed in Part V on
 synthetic data, and produces a **numerical audit** of the paper's quantitative
 claims.
 
-**Current paper: version 31.0** — [ATR_12_v31_RO.pdf](./ATR_12_v31_RO.pdf) ·
-[ATR_12_v31_EN.pdf](./ATR_12_v31_EN.pdf). Sources in [`paper/`](./paper);
+**Current paper: version 31.0** — [RO](./ATR_12_v31_RO.pdf) · [EN](./ATR_12_v31_EN.pdf) ·
+[DE](./ATR_12_v31_DE.pdf) · [FR](./ATR_12_v31_FR.pdf). Sources in [`paper/`](./paper);
 version 30 PDFs are kept in [`archive/v30/`](./archive/v30) for reference only.
 
 Version 31 applies the audit: ten numerical statements of v30 are corrected,

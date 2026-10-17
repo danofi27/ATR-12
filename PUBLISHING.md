@@ -53,7 +53,7 @@ If any of these change, something is wrong:
 - [ ] `python check.py` → ALL CHECKS PASSED.
 - [ ] `LICENSE` present (MIT).
 - [ ] `CITATION.cff` updated with the final version and date.
-- [ ] `ATR_12_v31_RO.pdf` and `ATR_12_v31_EN.pdf` rebuilt from the current sources.
+- [ ] `ATR_12_v31_{RO,EN,DE,FR}.pdf` rebuilt from the current sources.
 - [ ] `git status` clean, no secrets, no `results/`.
 - [ ] Author identity set: `git config user.name "Daniel Ofiteru"` and the GitHub e-mail.
 - [ ] Decide whether `ATR-12_v5.md` (empty file) stays.
@@ -89,9 +89,12 @@ The papers are Markdown sources in [`paper/`](./paper), compiled by Edge:
 ```bat
 python paper\build_paper.py paper\paper_v31_ro.md --lang RO
 python paper\build_paper.py paper\paper_v31_en.md --lang EN
+python paper\build_paper.py paper\paper_v31_de.md --lang DE
+python paper\build_paper.py paper\paper_v31_fr.md --lang FR
 ```
 
-Outputs: `ATR_12_v31_RO.pdf`, `ATR_12_v31_EN.pdf` in the project root.
+Outputs: `ATR_12_v31_<LANG>.pdf` in the project root. Available today: RO, EN,
+DE, FR. Still to translate from the v31 master: ES, IT, RU, JP, CN.
 
 To add a language, copy `paper_v31_en.md` to `paper_v31_<lang>.md`, translate the
 text (do **not** touch the `$$...$$` blocks or the image paths), and run the
