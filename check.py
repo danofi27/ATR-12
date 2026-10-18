@@ -158,8 +158,15 @@ def check_figures(results: dict) -> Outcome:
     figures = [Path(path) for path in results.get("figures", [])]
     missing = [p.name for p in figures if not p.exists()]
     small = [p.name for p in figures if p.exists() and p.stat().st_size < MIN_FIGURE_BYTES]
-    ok = len(figures) == len(EXPECTED_FIGURES) and not missing and not small
-    return Outcome("figures", ok, f"{len(figures)} figures, min {MIN_FIGURE_BYTES // 1000} KB")
+    vector_missing = [p.with_suffix(".pdf").name for p in figures if not p.with_suffix(".pdf").exists()]
+    ok = (
+        len(figures) == len(EXPECTED_FIGURES)
+        and not missing
+        and not small
+        and not vector_missing
+    )
+    detail = f"{len(figures)} PNG + {len(figures) - len(vector_missing)} vector PDF"
+    return Outcome("figures", ok, detail, missing + vector_missing)
 
 
 def check_papers() -> Outcome:

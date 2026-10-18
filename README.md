@@ -9,7 +9,8 @@ claims.
 
 - **Romanian (complete):** [ATR_12_v31_RO.pdf](./ATR_12_v31_RO.pdf) — 41 pages, built from
   [ATR_12_v31_RO.tex](./ATR_12_v31_RO.tex), which is the full v30 text with the ten
-  corrections, the new sections and the seven figures. Ready to edit on Overleaf.
+  corrections, the new sections and the seven figures (vector PDF, print quality).
+  Ready to edit on Overleaf.
 - **Condensed versions (19 pages):** [EN](./ATR_12_v31_EN.pdf) · [DE](./ATR_12_v31_DE.pdf) ·
   [FR](./ATR_12_v31_FR.pdf) · [ES](./ATR_12_v31_ES.pdf) · [IT](./ATR_12_v31_IT.pdf) —
   Markdown sources in [`paper/`](./paper). They will be regenerated from the full
@@ -62,6 +63,9 @@ figures are useful directly in the paper).
 > `export PYTHONDONTWRITEBYTECODE=1` (Linux/macOS), or copy the project locally.
 
 ## What it computes
+
+Each figure is written twice: a vector `.pdf` for the paper (used by the LaTeX
+source) and a `.png` at 200 dpi for the README and the web.
 
 | Module | Content | Relations |
 |---|---|---|

@@ -73,6 +73,15 @@ def ensure_dirs(cfg: ATR12Config) -> None:
     Path(cfg.results_dir).mkdir(parents=True, exist_ok=True)
 
 
+def save_figure(fig: Any, path: Path, png_dpi: int = 200) -> list[str]:
+    """Save a figure as vector PDF (for the paper) and as PNG (for the web/README)."""
+    path = Path(path)
+    fig.savefig(path, dpi=png_dpi)
+    pdf_path = path.with_suffix(".pdf")
+    fig.savefig(pdf_path)
+    return [str(path), str(pdf_path)]
+
+
 # ---------------------------------------------------------------------------
 # Figures
 # ---------------------------------------------------------------------------
@@ -92,7 +101,7 @@ def plot_kk_spectrum(cfg: ATR12Config, path: Path) -> None:
     ax.grid(True, which="both", alpha=0.3)
     ax.legend(fontsize=8)
     fig.tight_layout()
-    fig.savefig(path, dpi=150)
+    save_figure(fig, path)
     plt.close(fig)
 
 
@@ -121,7 +130,7 @@ def plot_field_dynamics(cfg: ATR12Config, path: Path) -> None:
     axes[1].legend(fontsize=7, loc="lower right")
     axes[1].grid(alpha=0.3)
     fig.tight_layout()
-    fig.savefig(path, dpi=150)
+    save_figure(fig, path)
     plt.close(fig)
 
 
@@ -158,7 +167,7 @@ def plot_phi_architecture(cfg: ATR12Config, comparison: dict[str, Any], path: Pa
     axes[1].set_title("Architecture ratio (network average)")
     axes[1].grid(axis="y", alpha=0.3, which="both")
     fig.tight_layout()
-    fig.savefig(path, dpi=150)
+    save_figure(fig, path)
     plt.close(fig)
 
 
@@ -185,7 +194,7 @@ def plot_empathy(cfg: ATR12Config, hyperscanning: dict[str, Any], path: Path) ->
     axes[1].legend(fontsize=8)
     axes[1].grid(alpha=0.3)
     fig.tight_layout()
-    fig.savefig(path, dpi=150)
+    save_figure(fig, path)
     plt.close(fig)
 
 
@@ -213,7 +222,7 @@ def plot_power(cfg: ATR12Config, power: dict[str, Any], path: Path) -> None:
     axes[1].legend(fontsize=8)
     axes[1].grid(alpha=0.3)
     fig.tight_layout()
-    fig.savefig(path, dpi=150)
+    save_figure(fig, path)
     plt.close(fig)
 
 
@@ -246,7 +255,7 @@ def plot_word(cfg: ATR12Config, analysis: dict[str, Any], path: Path) -> None:
     axes[1].xaxis.get_offset_text().set_visible(False)
     axes[0].xaxis.get_offset_text().set_visible(False)
     fig.tight_layout()
-    fig.savefig(path, dpi=150)
+    save_figure(fig, path)
     plt.close(fig)
 
 
@@ -263,7 +272,7 @@ def plot_flux(cfg: ATR12Config, path: Path) -> None:
     ax.grid(True, which="both", alpha=0.3)
     ax.legend(fontsize=8)
     fig.tight_layout()
-    fig.savefig(path, dpi=150)
+    save_figure(fig, path)
     plt.close(fig)
 
 

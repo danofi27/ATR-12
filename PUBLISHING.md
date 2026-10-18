@@ -32,7 +32,7 @@ Requirements: Python ≥ 3.10, numpy, scipy, matplotlib, pytest, pymupdf (PDF ch
 | unit tests | every formula has a dedicated test | 31 passed |
 | pipeline | one run produces all 12 result files | 12/12 artefacts |
 | scientific audit | the audit reproduces its own verdicts | OK 5 / inconsistent 10 / untestable 2 |
-| figures | all seven figures are generated | 7 figures, > 10 KB each |
+| figures | all seven figures exist as PNG and vector PDF | 7 PNG + 7 PDF |
 | determinism | two runs with the same seed agree bit for bit | identical sha256 |
 | papers | the v31 PDFs are real documents | > 10 pages, > 100 KB |
 
@@ -93,7 +93,9 @@ tension, power analysis, audit) and the seven figures.
 To edit it on Overleaf:
 
 1. **New Project → Upload Project**, and upload `ATR_12_v31_RO.tex` **and** the
-   `figures/` folder (the seven PNGs are referenced as `figures/figXX_*.png`).
+   `figures/` folder. The `.tex` references the vector files
+   `figures/figXX_*.pdf`; the matching `.png` files are only for the README and
+   the web, so the PDFs are the ones that must be present.
 2. Set it as the main document (Menu → Main document).
 3. **Compiler:** XeLaTeX is recommended (correct Romanian ș/ț). pdfLaTeX also
    works — the preamble switches automatically via the `iftex` package.
