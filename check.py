@@ -194,31 +194,44 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--fast", action="store_true", help="skip the determinism run")
     args = parser.parse_args(argv)
 
-    outcomes: list[Outcome] = [check_environment(), check_tests()]
+    width = 20
+    header_done = False
+
+    def start() -> None:
+        nonlocal header_done
+        if not header_done:
+            print()
+            print("=" * (width + 60))
+            print("ART-12D verification")
+            print("=" * (width + 60))
+            header_done = True
+
+    def report(outcome: Outcome) -> Outcome:
+        start()
+        status = "PASS" if outcome.passed else "FAIL"
+        print(f"[{status}] {outcome.name.ljust(width)}  {outcome.detail}", flush=True)
+        for note in outcome.notes:
+            print(f"        missing: {note}", flush=True)
+        return outcome
+
+    outcomes: list[Outcome] = [
+        report(check_environment()),
+        report(check_tests()),
+    ]
 
     with tempfile.TemporaryDirectory() as tmpdir:
         tmp = Path(tmpdir)
         pipeline, results = check_pipeline(tmp)
-        outcomes.append(pipeline)
-        outcomes.append(check_audit(results))
-        outcomes.append(check_figures(results))
+        outcomes.append(report(pipeline))
+        outcomes.append(report(check_audit(results)))
+        outcomes.append(report(check_figures(results)))
         if not args.fast:
-            outcomes.append(check_determinism(results, tmp))
+            outcomes.append(report(check_determinism(results, tmp)))
 
-    outcomes.append(check_papers())
+    outcomes.append(report(check_papers()))
 
-    width = max(len(o.name) for o in outcomes)
-    print()
+    start()
     print("=" * (width + 60))
-    print("ART-12D verification")
-    print("=" * (width + 60))
-    for outcome in outcomes:
-        status = "PASS" if outcome.passed else "FAIL"
-        print(f"[{status}] {outcome.name.ljust(width)}  {outcome.detail}")
-        for note in outcome.notes:
-            print(f"        missing: {note}")
-    print("=" * (width + 60))
-
     failed = [o.name for o in outcomes if not o.passed]
     if failed:
         print(f"FAILED: {', '.join(failed)}")
