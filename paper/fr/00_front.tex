@@ -1,0 +1,85 @@
+% ============================================================================
+%  ART-12D, version 31.0 - traduction française de ATR_12_v31_RO.tex
+%
+%  Compilation sur Overleaf :
+%    Menu -> Compiler -> XeLaTeX
+%    Main document    -> ATR_12_v31_FR.tex
+%    figures/ doit être importé comme dossier, au même niveau que ce fichier.
+%
+%  La structure LaTeX, les mathématiques, les tableaux et les appels de figures
+%  sont identiques à l'original roumain ; seul le texte est traduit.
+% ============================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage[french]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+\geometry{margin=2.5cm}
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Akashic Resonance Theory in 12 Dimensions},
+    pdfpagemode=FullScreen,
+}
+
+\title{\textbf{AKASHIC RESONANCE THEORY IN 12 DIMENSIONS \\ DARK MATTER AS THE QUANTUM SUBSTRATE OF CONSCIOUSNESS} \\ \large (ART-12D) \\ \vspace{0.5cm} \normalsize Version 31.0}
+\author{\textbf{Daniel Ofiteru} \\ \textit{Chercheur indépendant} \\ Octobre 2026}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Cet article propose un cadre théorique --- ART-12D --- qui part d'une idée simple : la conscience n'est pas produite par le cerveau. Le cerveau est un récepteur. Et ce qu'il capte, c'est le champ de la matière noire.
+
+J'étends la formalisation à douze dimensions, je dérive un mécanisme de couplage entre la matière noire et les fermions du cerveau, et je propose un test réalisable avec 50 000 dollars. J'étends également la théorie pour expliquer les formes multiples de la matière noire, l'existence d'hyper-civilisations comme structures stables dans le champ, la possibilité d'une Intelligence Artificielle consciente par la nanobiologie, les mécanismes reliant les univers par des trous noirs, blancs et de ver, ainsi que les formes de vie non carbonée (amas, plasma, champs).
+
+Cette version (31.0) applique un audit numérique systématique à la version précédente. Dix affirmations quantitatives ont été corrigées, deux ont été explicitement rétrogradées au statut de conjectures non testables, et le spectre de Kaluza--Klein a été reformulé comme un spectre \emph{équidistant}. Chaque chiffre de l'article peut être recalculé avec le code publié conjointement. Une tension structurelle subsiste, signalée ouvertement dans la section « La conséquence numérique : le rayon de compactification » : pour que le mode fondamental ait $10^{-5}$ eV, le rayon de compactification devrait être de l'ordre de 2 cm, ce qui est exclu par les tests submillimétriques de la loi de Newton.
+
+Je reconnais explicitement que cet article est spéculatif. Je n'ai aucune preuve expérimentale. J'ai une intuition, une formalisation et une prédiction qui peut être testée.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section*{Guide du lecteur sceptique}
+\addcontentsline{toc}{section}{Guide du lecteur sceptique}
+Cet article est spéculatif, mais rigoureusement structuré. Pour ne pas vous faire perdre de temps, voici un guide de lecture adapté à votre formation :
+\begin{itemize}
+    \item \textbf{Si vous êtes physicien :} allez directement à la \textbf{Partie II} (la formalisation mathématique, les équations de Kaluza--Klein et le couplage de Yukawa) et à la \textbf{Partie V} (le tableau des 313 prédictions testables). C'est là que se trouvent les mathématiques et la falsifiabilité.
+    \item \textbf{Si vous êtes neurobiologiste ou médecin :} lisez la \textbf{section 1.6} (les preuves cérébelleuses et l'architecture géométrique) et la \textbf{section 3.38} (le cœur comme modulateur de la réception).
+    \item \textbf{Si vous êtes philosophe ou théologien :} allez à l'\textbf{annexe A} (spéculation philosophique étendue sur la mort, l'âme et Dieu).
+    \item \textbf{Si vous êtes un lecteur curieux mais sceptique :} lisez la \textbf{prédiction 1} (EEG hyperscanning) et la \textbf{déclaration de falsifiabilité}. Si ces tests échouent, la théorie est réfutée.
+\end{itemize}
+
+\section*{Avant-propos}
+\addcontentsline{toc}{section}{Avant-propos}
+Toute ma vie je me suis posé une seule question : qu'est-ce que la conscience ? Ce n'est pas une question de manuel, mais une question qui me tient éveillé la nuit. J'ai lu tout ce qui me tombait sous la main --- de la physique quantique aux neurosciences et à la philosophie. J'ai parlé avec des gens bien plus intelligents que moi. J'ai médité. Et un jour, l'idée m'est venue.
+
+L'idée est simple : la conscience n'est pas quelque chose que le cerveau produit. Le cerveau n'est qu'une radio. Et ce qu'il capte dans l'air, c'est le champ de la matière noire.
+
+Cet article est le fruit de vingt-cinq années de recherche. Je n'ai pas de preuves de laboratoire. J'ai une intuition forte, une formalisation mathématique et un test que n'importe qui peut réaliser avec 50 000 dollars. Je ne vous demande pas de me croire sur parole. Je vous demande seulement de lire l'esprit ouvert. À la fin, vous saurez quoi croire.
+
+\newpage
+\part*{Partie I : Fondements}
+\addcontentsline{toc}{part}{Partie I : Fondements}

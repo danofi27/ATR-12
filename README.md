@@ -25,8 +25,9 @@ claims.
   prose can be revised part by part.
 - **German (complete):** [ATR_12_v31_DE.pdf](./ATR_12_v31_DE.pdf) — 43 pages,
   section-by-section translation, assembled from [`paper/de/`](./paper/de).
-- **Condensed versions (19 pages):** [FR](./ATR_12_v31_FR.pdf) ·
-  [ES](./ATR_12_v31_ES.pdf) · [IT](./ATR_12_v31_IT.pdf) —
+- **French (complete):** [ATR_12_v31_FR.pdf](./ATR_12_v31_FR.pdf) — 41 pages,
+  section-by-section translation, assembled from [`paper/fr/`](./paper/fr).
+- **Condensed versions (19 pages):** [ES](./ATR_12_v31_ES.pdf) · [IT](./ATR_12_v31_IT.pdf) —
   Markdown sources in [`paper/`](./paper). They will be regenerated from the full
   LaTeX master once the Overleaf edit is final.
 - The previous versions (v3, v7, v30) are **not published**. They remain on the
