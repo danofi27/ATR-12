@@ -119,8 +119,8 @@ To edit it on Overleaf:
 3. **Compiler:** XeLaTeX. pdfLaTeX also works (the preamble switches
    automatically via the `iftex` package), but XeLaTeX is what the reference
    build was verified with.
-4. Compile. The reference build is 41 pages, 0 raster images, no missing
-   characters.
+4. Compile. The reference build is 42 pages, 0 raster images, no missing
+   characters and no overfull boxes.
 
 After editing, check the compile log has no `Missing character` lines — that is
 how the two glyph defects found in v31 (a Romanian word left unwrapped in math
