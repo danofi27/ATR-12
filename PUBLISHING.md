@@ -109,14 +109,22 @@ tension, power analysis, audit) and the seven figures.
 
 To edit it on Overleaf:
 
-1. **New Project → Upload Project**, and upload `ATR_12_v31_RO.tex` **and** the
-   `figures/` folder. The `.tex` references the vector files
-   `figures/figXX_*.pdf`; the matching `.png` files are only for the README and
-   the web, so the PDFs are the ones that must be present.
+1. **New Project → Upload Project** and upload the ready-made bundle
+   `ATR-12_overleaf_upload.zip` (one level above this repository). It contains
+   `ATR_12_v31_RO.tex` and the seven vector figures under `figures/`. You can
+   also upload the `.tex` and the `figures/` folder by hand. The `.tex`
+   references `figures/figXX_*.pdf`; the matching `.png` files are only for the
+   README and the web, so the PDFs are the ones that must be present.
 2. Set it as the main document (Menu → Main document).
-3. **Compiler:** XeLaTeX is recommended (correct Romanian ș/ț). pdfLaTeX also
-   works — the preamble switches automatically via the `iftex` package.
-4. Compile. The reference build is 41 pages.
+3. **Compiler:** XeLaTeX. pdfLaTeX also works (the preamble switches
+   automatically via the `iftex` package), but XeLaTeX is what the reference
+   build was verified with.
+4. Compile. The reference build is 41 pages, 0 raster images, no missing
+   characters.
+
+After editing, check the compile log has no `Missing character` lines — that is
+how the two glyph defects found in v31 (a Romanian word left unwrapped in math
+mode, and a Devanagari quote with no available font) were caught.
 
 ### Other languages — Markdown pipeline
 
