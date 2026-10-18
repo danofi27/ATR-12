@@ -1,5 +1,11 @@
 # ART-12D — Akashic Resonance Theory in 12 Dimensions
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23457100.svg)](https://doi.org/10.5281/zenodo.23457100)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+
+**Archived DOI (v1.0.0):** [10.5281/zenodo.23457100](https://doi.org/10.5281/zenodo.23457100) ·
+concept DOI for all versions: [10.5281/zenodo.23457099](https://doi.org/10.5281/zenodo.23457099)
+
 Simulation code accompanying the **ART-12D** paper. The package implements the
 relations of Part II of the paper, runs the experiments proposed in Part V on
 synthetic data, and produces a **numerical audit** of the paper's quantitative

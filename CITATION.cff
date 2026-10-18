@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Daca folositi acest cod, citati lucrarea si acest pachet."
-title: "ART-12D: Akashic Resonance Theory in 12 Dimensions - simulation code"
+title: "ART-12D: Akashic Resonance Theory in 12 Dimensions - simulation code and corrected preprint (v31.0)"
 abstract: >-
   Cod de simulare care insoteste preprintul ART-12D v31: spectru Kaluza-Klein,
   câmpul constitintei, informatie integrata, cuplaj Yukawa, hyperscanning EEG,
@@ -10,8 +10,10 @@ authors:
     given-names: Daniel
     affiliation: Independent Researcher
 version: 1.0.0
-date-released: "2026-10-17"
+date-released: "2026-10-18"
+doi: "10.5281/zenodo.23457100"
 license: MIT
+repository-code: "https://github.com/danofi27/ATR-12"
 keywords:
   - consciousness
   - dark matter
@@ -25,4 +27,5 @@ references:
       - family-names: Ofiteru
         given-names: Daniel
     year: 2026
-    notes: Speculative preprint, unpublished
+    doi: "10.5281/zenodo.23457100"
+    notes: Speculative preprint
