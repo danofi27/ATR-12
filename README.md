@@ -23,8 +23,10 @@ claims.
   [ATR_12_v31_EN.tex](./ATR_12_v31_EN.tex). The source is assembled from the
   per-part files in [`paper/en/`](./paper/en) by `paper/build_lang.py`, so the
   prose can be revised part by part.
-- **Condensed versions (19 pages):** [DE](./ATR_12_v31_DE.pdf) ·
-  [FR](./ATR_12_v31_FR.pdf) · [ES](./ATR_12_v31_ES.pdf) · [IT](./ATR_12_v31_IT.pdf) —
+- **German (complete):** [ATR_12_v31_DE.pdf](./ATR_12_v31_DE.pdf) — 43 pages,
+  section-by-section translation, assembled from [`paper/de/`](./paper/de).
+- **Condensed versions (19 pages):** [FR](./ATR_12_v31_FR.pdf) ·
+  [ES](./ATR_12_v31_ES.pdf) · [IT](./ATR_12_v31_IT.pdf) —
   Markdown sources in [`paper/`](./paper). They will be regenerated from the full
   LaTeX master once the Overleaf edit is final.
 - The previous versions (v3, v7, v30) are **not published**. They remain on the
