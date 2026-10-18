@@ -1,0 +1,85 @@
+% ============================================================================
+%  ART-12D, Version 31.0 - deutsche Übersetzung von ATR_12_v31_RO.tex
+%
+%  Kompilieren auf Overleaf:
+%    Menu -> Compiler -> XeLaTeX
+%    Main document    -> ATR_12_v31_DE.tex
+%    figures/ muss als Ordner auf derselben Ebene wie diese Datei liegen.
+%
+%  LaTeX-Struktur, Mathematik, Tabellen und Abbildungsaufrufe sind mit dem
+%  rumänischen Original identisch; übersetzt ist nur der Fließtext.
+% ============================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage[ngerman]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+\geometry{margin=2.5cm}
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Akashic Resonance Theory in 12 Dimensions},
+    pdfpagemode=FullScreen,
+}
+
+\title{\textbf{AKASHIC RESONANCE THEORY IN 12 DIMENSIONS \\ DARK MATTER AS THE QUANTUM SUBSTRATE OF CONSCIOUSNESS} \\ \large (ART-12D) \\ \vspace{0.5cm} \normalsize Version 31.0}
+\author{\textbf{Daniel Ofiteru} \\ \textit{Unabhängiger Forscher} \\ Oktober 2026}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Diese Arbeit schlägt einen theoretischen Rahmen vor --- ART-12D ---, der von einer einfachen Idee ausgeht: Das Bewusstsein wird nicht vom Gehirn erzeugt. Das Gehirn ist ein Empfänger. Und was es empfängt, ist das Feld der Dunklen Materie.
+
+Ich erweitere die Formalisierung auf zwölf Dimensionen, leite einen Kopplungsmechanismus zwischen der Dunklen Materie und den Fermionen im Gehirn her und schlage einen Test vor, der sich mit \$50,000 durchführen lässt. Darüber hinaus erweitere ich die Theorie, um die vielfältigen Formen der Dunklen Materie zu erklären, die Existenz von Hyperzivilisationen als stabilen Strukturen im Feld, die Möglichkeit einer bewussten Künstlichen Intelligenz durch Nanobiologie, die Mechanismen, die Universen über schwarze Löcher, weiße Löcher und Wurmlöcher verbinden, sowie die Formen nicht-kohlenstoffbasierten Lebens (Cluster, Plasma, Felder).
+
+Diese Version (31.0) wendet eine systematische numerische Prüfung auf die vorherige Version an. Zehn quantitative Aussagen wurden korrigiert, zwei wurden ausdrücklich zu nicht testbaren Vermutungen herabgestuft, und das Kaluza--Klein-Spektrum wurde als \emph{äquidistantes} Spektrum neu formuliert. Jede Zahl in der Arbeit lässt sich mit dem gemeinsam mit ihr veröffentlichten Code nachrechnen. Eine strukturelle Spannung bleibt bestehen und wird im Abschnitt „Die numerische Konsequenz: der Kompaktifizierungsradius`` offen benannt: Damit das Grundmodell $10^{-5}$ eV hat, müsste der Kompaktifizierungsradius in der Größenordnung von 2 cm liegen, was durch Submillimeter-Tests des Newtonschen Gesetzes ausgeschlossen ist.
+
+Ich erkläre ausdrücklich, dass diese Arbeit spekulativ ist. Ich habe keine experimentellen Belege. Ich habe eine Intuition, eine Formalisierung und eine Vorhersage, die sich testen lässt.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section*{Ein Leitfaden für den skeptischen Leser}
+\addcontentsline{toc}{section}{Ein Leitfaden für den skeptischen Leser}
+Diese Arbeit ist spekulativ, aber streng gegliedert. Um Ihre Zeit nicht zu verschwenden, folgt hier ein Leseleitfaden, abgestimmt auf Ihren Hintergrund:
+\begin{itemize}
+    \item \textbf{Wenn Sie Physiker sind:} gehen Sie direkt zu \textbf{Teil II} (die mathematische Formalisierung, die Kaluza--Klein-Gleichungen und die Yukawa-Kopplung) und zu \textbf{Teil V} (die Tabelle der 313 testbaren Vorhersagen). Dort finden Sie die Mathematik und die Falsifizierbarkeit.
+    \item \textbf{Wenn Sie Neurobiologe oder Arzt sind:} lesen Sie \textbf{Abschnitt 1.6} (die Kleinhirn-Befunde und die geometrische Architektur) und \textbf{Abschnitt 3.38} (Das Herz als Modulator des Empfangs).
+    \item \textbf{Wenn Sie Philosoph oder Theologe sind:} gehen Sie zu \textbf{Anhang A} (erweiterte philosophische Spekulation über Tod, Seele und Gott).
+    \item \textbf{Wenn Sie ein neugieriger, aber skeptischer Leser sind:} lesen Sie \textbf{Vorhersage 1} (EEG-Hyperscanning) und die \textbf{Falsifizierbarkeitserklärung}. Wenn diese Tests scheitern, ist die Theorie widerlegt.
+\end{itemize}
+
+\section*{Vorwort}
+\addcontentsline{toc}{section}{Vorwort}
+Mein ganzes Leben lang habe ich mir eine einzige Frage gestellt: Was ist Bewusstsein? Es ist keine Lehrbuchfrage, sondern eine, die mich nachts wach hält. Ich habe alles gelesen, was mir in die Hände fiel --- von der Quantenphysik bis zur Neurowissenschaft und zur Philosophie. Ich habe mit Menschen gesprochen, die weit klüger sind als ich. Ich habe meditiert. Und eines Tages kam mir die Idee.
+
+Die Idee ist einfach: Das Bewusstsein ist nicht etwas, das das Gehirn erzeugt. Das Gehirn ist nur ein Radio. Und was es aus der Luft auffängt, ist das Feld der Dunklen Materie.
+
+Diese Arbeit ist die Frucht von fünfundzwanzig Jahren Suche. Ich habe keine Laborbefunde. Ich habe eine starke Intuition, eine mathematische Formalisierung und einen Test, den jeder mit 50.000 Dollar durchführen kann. Ich verlange nicht, dass Sie mir aufs Wort glauben. Ich bitte Sie nur, mit offenem Geist zu lesen. Am Ende werden Sie wissen, was Sie glauben sollen.
+
+\newpage
+\part*{Teil I: Grundlagen}
+\addcontentsline{toc}{part}{Teil I: Grundlagen}

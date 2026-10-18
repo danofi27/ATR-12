@@ -130,13 +130,14 @@ mode, and a Devanagari quote with no available font) were caught.
 
 `ATR_12_v31_EN.tex` is a section-by-section translation of the Romanian master.
 Do not edit it directly: it is generated. The prose lives in
-[`paper/en/`](./paper/en), one file per part, and `paper/build_en.py`
+[`paper/en/`](./paper/en), one file per part, and `paper/build_lang.py`
 concatenates them in order, writes the `.tex`, compiles it and reports the page
-count plus any missing glyphs or overfull boxes.
+count plus any missing glyphs or overfull boxes. The same script builds every
+other language edition (`de`, `fr`, `es`, `it`, ...).
 
 ```bash
-python paper/build_en.py            # assemble + compile + report
-python paper/build_en.py --no-compile   # assemble only
+python paper/build_lang.py en            # assemble + compile + report
+python paper/build_lang.py en --no-compile   # assemble only
 ```
 
 On the NAS, run it from a local copy (see the run notes above); the build takes

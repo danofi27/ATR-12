@@ -21,7 +21,7 @@ claims.
 - **English (complete):** [ATR_12_v31_EN.pdf](./ATR_12_v31_EN.pdf) — 41 pages, a
   section-by-section translation of the Romanian master, built from
   [ATR_12_v31_EN.tex](./ATR_12_v31_EN.tex). The source is assembled from the
-  per-part files in [`paper/en/`](./paper/en) by `paper/build_en.py`, so the
+  per-part files in [`paper/en/`](./paper/en) by `paper/build_lang.py`, so the
   prose can be revised part by part.
 - **Condensed versions (19 pages):** [DE](./ATR_12_v31_DE.pdf) ·
   [FR](./ATR_12_v31_FR.pdf) · [ES](./ATR_12_v31_ES.pdf) · [IT](./ATR_12_v31_IT.pdf) —
