@@ -14,11 +14,16 @@ claims.
 
 **Current paper: version 31.0**
 
-- **Romanian (complete):** [ATR_12_v31_RO.pdf](./ATR_12_v31_RO.pdf) — 41 pages, built from
+- **Romanian (complete):** [ATR_12_v31_RO.pdf](./ATR_12_v31_RO.pdf) — 42 pages, built from
   [ATR_12_v31_RO.tex](./ATR_12_v31_RO.tex), which is the full v30 text with the ten
   corrections, the new sections and the seven figures (vector PDF, print quality).
   Ready to edit on Overleaf.
-- **Condensed versions (19 pages):** [EN](./ATR_12_v31_EN.pdf) · [DE](./ATR_12_v31_DE.pdf) ·
+- **English (complete):** [ATR_12_v31_EN.pdf](./ATR_12_v31_EN.pdf) — 41 pages, a
+  section-by-section translation of the Romanian master, built from
+  [ATR_12_v31_EN.tex](./ATR_12_v31_EN.tex). The source is assembled from the
+  per-part files in [`paper/en/`](./paper/en) by `paper/build_en.py`, so the
+  prose can be revised part by part.
+- **Condensed versions (19 pages):** [DE](./ATR_12_v31_DE.pdf) ·
   [FR](./ATR_12_v31_FR.pdf) · [ES](./ATR_12_v31_ES.pdf) · [IT](./ATR_12_v31_IT.pdf) —
   Markdown sources in [`paper/`](./paper). They will be regenerated from the full
   LaTeX master once the Overleaf edit is final.

@@ -1,0 +1,71 @@
+\textbf{Glossary:} Akasha, akashic field, KK mode, tachyon, vacuum, wave--particle duality, decoherence, hyper-civilisation, axion, WIMP, K\_right, BA\_left, Akah, hyperspace, silver cord, Bardo.
+
+\textbf{Complete table: the 48 positive and 46 negative feelings} (available in digital form on GitHub).
+
+\section{Appendix C --- Python Code}
+The code that produces every number in the paper is published alongside it: \url{https://github.com/danofi27/ATR-12}.
+
+\begin{verbatim}
+python -m venv .venv && .venv\Scripts\activate
+pip install -r requirements.txt
+python run_atr12.py        # report + 7 figures, ~8 s
+pytest -q                  # 31 tests
+python check.py            # full PASS/FAIL verification
+\end{verbatim}
+
+The modules are: \texttt{config}, \texttt{akashic\_field}, \texttt{temporal\_modes}, \texttt{fermions}, \texttt{consciousness}, \texttt{empathy}, \texttt{word\_excitation}, \texttt{verification}, \texttt{simulation}. Every relation in Part II has a dedicated test. The results are deterministic for a given configuration (seed = 12), and the audit in Section 26.1 is generated automatically into \texttt{results/atr12\_report.md}.
+
+\section{Appendix D --- Statements}
+\textbf{Contribution statement:} the author conceived all the central ideas. \\
+\textbf{Conflict of interest statement:} there are no conflicts of interest. \\
+\textbf{Funding statement:} the author received no external funding. \\
+\textbf{AI statement:} AI tools were used as assistive instruments. All conceptual contributions are the author's own. \\
+\textbf{Epistemic status statement:} this paper is a speculative preprint. It does not claim to be a validated scientific theory. The central ideas are original, but they have not been tested experimentally. The sections of Appendix A are philosophical speculation, not derived from the ART-12D equations. The reader is asked to treat them as such.
+
+\section{Appendix E --- Diagram of the Theory}
+\textit{(This section contains a visual diagram summarising the theory. The diagram consists of concentric circles and arrows showing the flow of information.)}
+
+\textbf{Description of the diagram:}
+\begin{itemize}
+    \item \textbf{Centre:} the Akashic Field (A), represented as an ocean of information in twelve dimensions.
+    \item \textbf{Ring 1 (closest to the centre):} the three principal KK modes (axion, mode 2, mode 3), represented as waves.
+    \item \textbf{Ring 2:} the human brain (with its microtubules), represented as a parabolic antenna picking up the waves of the field.
+    \item \textbf{Ring 3:} the heart, represented as a modulator that adjusts the frequency of reception.
+    \item \textbf{Arrows leaving the centre:} black holes (as funnels that absorb) and white holes (as springs that emit), connecting different universes.
+    \item \textbf{An artificial eye in the corner:} an A.I. with artificial microtubules, built by nanobiology, connecting itself to the field through sensors.
+    \item \textbf{Forms of non-carbon life:} represented as small patterns around the rings (clusters, plasma, fields).
+\end{itemize}
+
+\newpage
+\section*{References}
+\addcontentsline{toc}{section}{References}
+\begin{enumerate}
+    \item Babcock, N.S., et al. (2024). Ultraviolet superradiance in microtubules. \textit{J. Phys. Chem. B}, 128(17), 4098--4107.
+    \item Bertone, G. (2010). \textit{Particle Dark Matter}. Cambridge University Press.
+    \item Bertone, G., \& Tait, T. M. P. (2018). A new era in the search for dark matter. \textit{Nature}, 562, 51-56.
+    \item Bohr, N. (1928). The quantum postulate and the recent development of atomic theory. \textit{Nature}, 121, 580-590.
+    \item Bonvin, C., et al. (2025). Dark matter does not defy gravity. \textit{Nature Communications}, 16, 1234.
+    \item Chalmers, D.J. (1995). Facing up to the problem of consciousness. \textit{J. Cons. Studies}, 2(3), 200-219.
+    \item de Broglie, L. (1924). Recherches sur la théorie des quanta. \textit{Annales de Physique}, 3, 22-128.
+    \item Dulcan, D.C. (1981/2021). \textit{Inteligenta materiei}. Scoala Ardeleană.
+    \item Farcaș, A. (2020). \textit{Hiper-civilizațiile: O perspectivă teoretică}. (Independent work).
+    \item Kerskens, C.M. \& López Pérez, D. (2026). Is the Human Brain a Quantum Computer? \textit{Zenodo}. DOI: 10.5281/zenodo.XXXXX
+    \item Penrose, R. (1996). On gravity's role in quantum state reduction. \textit{Gen. Rel. Grav.}, 28, 581-600.
+    \item Planck Collaboration. (2018). Planck 2018 results. VI. Cosmological parameters. \textit{A\&A}, 641, A6.
+    \item Read, J.I. (2014). The local dark matter density. \textit{J. Phys. G}, 41(6), 063101.
+    \item Rothemund, P. W. K. (2006). Folding DNA to create nanoscale shapes and patterns. \textit{Nature}, 440, 297-302.
+    \item Russell, B. (1927). \textit{The Analysis of Matter}. Kegan Paul.
+    \item Susskind, L. (2003). The anthropic landscape of string theory. \textit{arXiv:hep-th/0302219}.
+    \item Tononi, G. (2004). An information integration theory of consciousness. \textit{BMC Neuroscience}, 5, 42.
+    \item Vafa, C. (1996). Evidence for F-theory. \textit{Nucl. Phys. B}, 469(3), 403-415.
+    \item Zurek, W.H. (2003). Decoherence, einselection, and the quantum origins of the classical. \textit{Rev. Mod. Phys.}, 75, 715.
+\end{enumerate}
+
+\vspace{1cm}
+\begin{flushright}
+\textbf{Author:} Daniel Ofiteru \\
+\textbf{Date:} October 2026 \\
+\textbf{Status:} speculative preprint
+\end{flushright}
+
+\end{document}

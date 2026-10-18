@@ -126,6 +126,23 @@ After editing, check the compile log has no `Missing character` lines — that i
 how the two glyph defects found in v31 (a Romanian word left unwrapped in math
 mode, and a Devanagari quote with no available font) were caught.
 
+### English — full translation
+
+`ATR_12_v31_EN.tex` is a section-by-section translation of the Romanian master.
+Do not edit it directly: it is generated. The prose lives in
+[`paper/en/`](./paper/en), one file per part, and `paper/build_en.py`
+concatenates them in order, writes the `.tex`, compiles it and reports the page
+count plus any missing glyphs or overfull boxes.
+
+```bash
+python paper/build_en.py            # assemble + compile + report
+python paper/build_en.py --no-compile   # assemble only
+```
+
+On the NAS, run it from a local copy (see the run notes above); the build takes
+longer than the share allows. The reference build is 41 pages, 0 errors,
+0 warnings, 0 overfull boxes.
+
 ### Other languages — Markdown pipeline
 
 The DE/FR/ES/IT versions are currently the condensed Markdown sources in

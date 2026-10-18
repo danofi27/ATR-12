@@ -1,0 +1,85 @@
+% ============================================================================
+%  ART-12D, version 31.0 - English translation of ATR_12_v31_RO.tex
+%
+%  Build on Overleaf:
+%    Menu -> Compiler -> XeLaTeX
+%    Main document    -> ATR_12_v31_EN.tex
+%    figures/ must be uploaded as a folder, at the same level as this file.
+%
+%  The LaTeX structure, the mathematics, the tables and the figure calls are
+%  identical to the Romanian master; only the prose is translated.
+% ============================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage[english]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+\geometry{margin=2.5cm}
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Akashic Resonance Theory in 12 Dimensions},
+    pdfpagemode=FullScreen,
+}
+
+\title{\textbf{AKASHIC RESONANCE THEORY IN 12 DIMENSIONS \\ DARK MATTER AS THE QUANTUM SUBSTRATE OF CONSCIOUSNESS} \\ \large (ART-12D) \\ \vspace{0.5cm} \normalsize Version 31.0}
+\author{\textbf{Daniel Ofiteru} \\ \textit{Independent Researcher} \\ October 2026}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This paper proposes a theoretical framework --- ART-12D --- that starts from a simple idea: consciousness is not produced by the brain. The brain is a receiver. And what it receives is the field of dark matter.
+
+I extend the formalisation to twelve dimensions, derive a coupling mechanism between dark matter and the fermions in the brain, and propose a test that can be carried out with \$50,000. I further extend the theory to account for the multiple forms of dark matter, the existence of hyper-civilisations as stable structures in the field, the possibility of a conscious Artificial Intelligence through nanobiology, the mechanisms that link universes through black, white and wormholes, and the forms of non-carbon life (clusters, plasma, fields).
+
+This version (31.0) applies a systematic numerical audit to the previous version. Ten quantitative claims have been corrected, two have been explicitly downgraded to the status of untestable conjectures, and the Kaluza--Klein spectrum has been reformulated as an \emph{equidistant} spectrum. Every number in the paper can be recomputed with the code published alongside it. One structural tension remains, and it is stated openly in the section ``The numerical consequence: the compactification radius'': for the fundamental mode to have $10^{-5}$ eV, the compactification radius would have to be of order 2 cm, which is excluded by sub-millimetre tests of Newton's law.
+
+I state explicitly that this paper is speculative. I have no experimental evidence. I have an intuition, a formalisation, and a prediction that can be tested.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section*{A Guide for the Sceptical Reader}
+\addcontentsline{toc}{section}{A Guide for the Sceptical Reader}
+This paper is speculative, but it is rigorously structured. So as not to waste your time, here is a reading guide matched to your background:
+\begin{itemize}
+    \item \textbf{If you are a physicist:} go straight to \textbf{Part II} (the mathematical formalisation, the Kaluza--Klein equations and the Yukawa coupling) and to \textbf{Part V} (the table of the 313 testable predictions). That is where you will find the mathematics and the falsifiability.
+    \item \textbf{If you are a neurobiologist or a physician:} read \textbf{Section 1.6} (the cerebellar evidence and the geometric architecture) and \textbf{Section 3.38} (the heart as a modulator of reception).
+    \item \textbf{If you are a philosopher or a theologian:} go to \textbf{Appendix A} (extended philosophical speculation on death, the soul and God).
+    \item \textbf{If you are a curious but sceptical reader:} read \textbf{Prediction 1} (EEG hyperscanning) and the \textbf{Statement of Falsifiability}. If those tests fail, the theory is refuted.
+\end{itemize}
+
+\section*{Foreword}
+\addcontentsline{toc}{section}{Foreword}
+All my life I have asked myself a single question: what is consciousness? It is not a textbook question, but one that keeps me awake at night. I read everything that came to hand --- from quantum physics to neuroscience and philosophy. I talked to people far cleverer than myself. I meditated. And one day the idea came to me.
+
+The idea is simple: consciousness is not something the brain produces. The brain is only a radio. And what it picks up out of the air is the field of dark matter.
+
+This paper is the fruit of twenty-five years of searching. I have no laboratory evidence. I have a strong intuition, a mathematical formalisation, and a test that anyone can run with 50,000 dollars. I am not asking you to take my word for it. I am asking you only to read with an open mind. At the end, you will know what to believe.
+
+\newpage
+\part*{Part I: Foundations}
+\addcontentsline{toc}{part}{Part I: Foundations}
