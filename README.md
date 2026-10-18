@@ -27,9 +27,15 @@ claims.
   section-by-section translation, assembled from [`paper/de/`](./paper/de).
 - **French (complete):** [ATR_12_v31_FR.pdf](./ATR_12_v31_FR.pdf) — 41 pages,
   section-by-section translation, assembled from [`paper/fr/`](./paper/fr).
-- **Condensed versions (19 pages):** [ES](./ATR_12_v31_ES.pdf) · [IT](./ATR_12_v31_IT.pdf) —
-  Markdown sources in [`paper/`](./paper). They will be regenerated from the full
-  LaTeX master once the Overleaf edit is final.
+- **Spanish (complete):** [ATR_12_v31_ES.pdf](./ATR_12_v31_ES.pdf) — 42 pages,
+  section-by-section translation, assembled from [`paper/es/`](./paper/es).
+- **Italian (complete):** [ATR_12_v31_IT.pdf](./ATR_12_v31_IT.pdf) — 42 pages,
+  section-by-section translation, assembled from [`paper/it/`](./paper/it).
+
+Every edition is built from the same twelve-part structure by
+`paper/build_lang.py`, so a correction to the Romanian master can be carried
+across one part at a time.
+
 - The previous versions (v3, v7, v30) are **not published**. They remain on the
   author's disk for reference, but are untracked and listed in `.gitignore`.
 

@@ -1,0 +1,85 @@
+% ============================================================================
+%  ART-12D, versión 31.0 - traducción al español de ATR_12_v31_RO.tex
+%
+%  Compilación en Overleaf:
+%    Menu -> Compiler -> XeLaTeX
+%    Main document    -> ATR_12_v31_ES.tex
+%    figures/ debe subirse como carpeta, al mismo nivel que este archivo.
+%
+%  La estructura LaTeX, las matemáticas, las tablas y las llamadas de figuras
+%  son idénticas al original rumano; solo se traduce el texto.
+% ============================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+\geometry{margin=2.5cm}
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Akashic Resonance Theory in 12 Dimensions},
+    pdfpagemode=FullScreen,
+}
+
+\title{\textbf{AKASHIC RESONANCE THEORY IN 12 DIMENSIONS \\ DARK MATTER AS THE QUANTUM SUBSTRATE OF CONSCIOUSNESS} \\ \large (ART-12D) \\ \vspace{0.5cm} \normalsize Versión 31.0}
+\author{\textbf{Daniel Ofiteru} \\ \textit{Investigador independiente} \\ Octubre de 2026}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este artículo propone un marco teórico --- ART-12D --- que parte de una idea sencilla: la conciencia no la produce el cerebro. El cerebro es un receptor. Y lo que recibe es el campo de la materia oscura.
+
+Extiendo la formalización a doce dimensiones, deduzco un mecanismo de acoplamiento entre la materia oscura y los fermiones del cerebro, y propongo un test que puede realizarse con 50.000 dólares. Extiendo también la teoría para explicar las formas múltiples de la materia oscura, la existencia de hipercivilizaciones como estructuras estables en el campo, la posibilidad de una Inteligencia Artificial consciente mediante nanobiología, los mecanismos que conectan universos a través de agujeros negros, blancos y de gusano, así como las formas de vida no carbonosa (cúmulos, plasma, campos).
+
+Esta versión (31.0) aplica una auditoría numérica sistemática a la versión anterior. Diez afirmaciones cuantitativas han sido corregidas, dos han sido degradadas explícitamente al estatus de conjeturas no testables, y el espectro de Kaluza--Klein se ha reformulado como un espectro \emph{equidistante}. Cada cifra del artículo puede recalcularse con el código publicado junto a él. Persiste una tensión estructural, señalada abiertamente en la sección «La consecuencia numérica: el radio de compactificación»: para que el modo fundamental tenga $10^{-5}$ eV, el radio de compactificación tendría que ser del orden de 2 cm, lo que está excluido por los test submilimétricos de la ley de Newton.
+
+Reconozco explícitamente que este artículo es especulativo. No tengo pruebas experimentales. Tengo una intuición, una formalización y una predicción que puede ser testada.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section*{Guía para el lector escéptico}
+\addcontentsline{toc}{section}{Guía para el lector escéptico}
+Este artículo es especulativo, pero está rigurosamente estructurado. Para no hacerle perder el tiempo, aquí tiene una guía de lectura adaptada a su formación:
+\begin{itemize}
+    \item \textbf{Si usted es físico:} vaya directamente a la \textbf{Parte II} (la formalización matemática, las ecuaciones de Kaluza--Klein y el acoplamiento de Yukawa) y a la \textbf{Parte V} (la tabla de las 313 predicciones testables). Allí encontrará las matemáticas y la falsabilidad.
+    \item \textbf{Si usted es neurobiólogo o médico:} lea la \textbf{sección 1.6} (la prueba del cerebelo y la arquitectura geométrica) y la \textbf{sección 3.38} (el corazón como modulador de la recepción).
+    \item \textbf{Si usted es filósofo o teólogo:} vaya al \textbf{anexo A} (especulación filosófica extensa sobre la muerte, el alma y Dios).
+    \item \textbf{Si usted es un lector curioso pero escéptico:} lea la \textbf{predicción 1} (EEG hyperscanning) y la \textbf{declaración de falsabilidad}. Si esos test fallan, la teoría queda refutada.
+\end{itemize}
+
+\section*{Prólogo}
+\addcontentsline{toc}{section}{Prólogo}
+Toda mi vida me he hecho una sola pregunta: ¿qué es la conciencia? No es una pregunta de manual, sino una que me mantiene despierto por la noche. Leí todo lo que cayó en mis manos --- de la física cuántica a la neurociencia y a la filosofía. Hablé con personas mucho más inteligentes que yo. Medité. Y un día la idea me vino.
+
+La idea es sencilla: la conciencia no es algo que el cerebro produzca. El cerebro es solo una radio. Y lo que capta del aire es el campo de la materia oscura.
+
+Este artículo es fruto de veinticinco años de búsqueda. No tengo pruebas de laboratorio. Tengo una intuición fuerte, una formalización matemática y un test que cualquiera puede hacer con 50.000 dólares. No le pido que me crea a ciegas. Solo le pido que lea con la mente abierta. Al final, sabrá qué creer.
+
+\newpage
+\part*{Parte I: Fundamentos}
+\addcontentsline{toc}{part}{Parte I: Fundamentos}

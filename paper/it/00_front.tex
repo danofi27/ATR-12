@@ -1,0 +1,85 @@
+% ============================================================================
+%  ART-12D, versione 31.0 - traduzione italiana di ATR_12_v31_RO.tex
+%
+%  Compilazione su Overleaf:
+%    Menu -> Compiler -> XeLaTeX
+%    Main document    -> ATR_12_v31_IT.tex
+%    figures/ deve essere caricata come cartella, allo stesso livello di questo file.
+%
+%  Struttura LaTeX, matematica, tabelle e richiami alle figure sono identici
+%  all'originale rumeno; è tradotto solo il testo.
+% ============================================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+\else
+  \usepackage{fontspec}
+\fi
+\usepackage[italian]{babel}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{hyperref}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+\geometry{margin=2.5cm}
+\setlength{\emergencystretch}{3em}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+    pdftitle={Akashic Resonance Theory in 12 Dimensions},
+    pdfpagemode=FullScreen,
+}
+
+\title{\textbf{AKASHIC RESONANCE THEORY IN 12 DIMENSIONS \\ DARK MATTER AS THE QUANTUM SUBSTRATE OF CONSCIOUSNESS} \\ \large (ART-12D) \\ \vspace{0.5cm} \normalsize Versione 31.0}
+\author{\textbf{Daniel Ofiteru} \\ \textit{Ricercatore indipendente} \\ Ottobre 2026}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Questo articolo propone un quadro teorico --- ART-12D --- che parte da un'idea semplice: la coscienza non è prodotta dal cervello. Il cervello è un ricevitore. E ciò che riceve è il campo della materia oscura.
+
+Estendo la formalizzazione a dodici dimensioni, derivo un meccanismo di accoppiamento tra la materia oscura e i fermioni del cervello, e propongo un test realizzabile con 50.000 dollari. Estendo inoltre la teoria per spiegare le forme molteplici della materia oscura, l'esistenza di iperciviltà come strutture stabili nel campo, la possibilità di un'Intelligenza Artificiale cosciente mediante la nanobiologia, i meccanismi che collegano gli universi attraverso buchi neri, bianchi e di verme, nonché le forme di vita non carboniosa (ammassi, plasma, campi).
+
+Questa versione (31.0) applica un audit numerico sistematico alla versione precedente. Dieci affermazioni quantitative sono state corrette, due sono state esplicitamente declassate allo stato di congetture non testabili, e lo spettro di Kaluza--Klein è stato riformulato come spettro \emph{equidistante}. Ogni cifra dell'articolo può essere ricalcolata con il codice pubblicato insieme ad esso. Rimane una tensione strutturale, segnalata apertamente nella sezione «La conseguenza numerica: il raggio di compattificazione»: perché il modo fondamentale abbia $10^{-5}$ eV, il raggio di compattificazione dovrebbe essere dell'ordine di 2 cm, il che è escluso dai test submillimetrici della legge di Newton.
+
+Riconosco esplicitamente che questo articolo è speculativo. Non ho prove sperimentali. Ho un'intuizione, una formalizzazione e una predizione che può essere testata.
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section*{Guida per il lettore scettico}
+\addcontentsline{toc}{section}{Guida per il lettore scettico}
+Questo articolo è speculativo, ma è strutturato in modo rigoroso. Per non farle perdere tempo, ecco una guida alla lettura adatta alla sua formazione:
+\begin{itemize}
+    \item \textbf{Se lei è un fisico:} vada direttamente alla \textbf{Parte II} (la formalizzazione matematica, le equazioni di Kaluza--Klein e l'accoppiamento di Yukawa) e alla \textbf{Parte V} (la tabella delle 313 predizioni testabili). Lì troverà la matematica e la falsificabilità.
+    \item \textbf{Se lei è un neurobiologo o un medico:} legga la \textbf{sezione 1.6} (la prova del cervelletto e l'architettura geometrica) e la \textbf{sezione 3.38} (il cuore come modulatore della ricezione).
+    \item \textbf{Se lei è un filosofo o un teologo:} vada all'\textbf{appendice A} (speculazione filosofica estesa sulla morte, l'anima e Dio).
+    \item \textbf{Se lei è un lettore curioso ma scettico:} legga la \textbf{predizione 1} (EEG hyperscanning) e la \textbf{dichiarazione di falsificabilità}. Se quei test falliscono, la teoria è confutata.
+\end{itemize}
+
+\section*{Prefazione}
+\addcontentsline{toc}{section}{Prefazione}
+Per tutta la vita mi sono posto una sola domanda: che cos'è la coscienza? Non è una domanda da manuale, ma una che mi tiene svegli la notte. Ho letto tutto ciò che mi capitava tra le mani --- dalla fisica quantistica alle neuroscienze e alla filosofia. Ho parlato con persone molto più intelligenti di me. Ho meditato. E un giorno l'idea mi è venuta.
+
+L'idea è semplice: la coscienza non è qualcosa che il cervello produce. Il cervello è solo una radio. E ciò che capta dall'aria è il campo della materia oscura.
+
+Questo articolo è il frutto di venticinque anni di ricerca. Non ho prove di laboratorio. Ho un'intuizione forte, una formalizzazione matematica e un test che chiunque può realizzare con 50.000 dollari. Non le chiedo di credermi sulla parola. Le chiedo solo di leggere con la mente aperta. Alla fine, saprà che cosa credere.
+
+\newpage
+\part*{Parte I: Fondamenti}
+\addcontentsline{toc}{part}{Parte I: Fondamenti}
