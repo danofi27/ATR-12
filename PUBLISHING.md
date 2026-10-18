@@ -70,7 +70,9 @@ Then, on GitHub:
 
 1. **Settings → About:** description "Simulation code and corrected preprint for ART-12D (v31)", topics `consciousness`, `dark-matter`, `kaluza-klein`, `preprint`.
 2. **Releases → Draft a new release:** tag `v1.0.0`, title "ART-12D v31.0 + code v1.0.0", attach both PDFs.
-3. Do **not** publish the v30 PDFs in the release; they are archived in `archive/v30/`.
+3. Only version 31 is published. The superseded versions (v3, v7, v30) are
+   untracked and listed in `.gitignore`, so a fresh clone or archive contains
+   nothing but v31.
 
 The repository is already initialised with a single commit on `main`.
 

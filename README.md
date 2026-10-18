@@ -15,7 +15,8 @@ claims.
   [FR](./ATR_12_v31_FR.pdf) · [ES](./ATR_12_v31_ES.pdf) · [IT](./ATR_12_v31_IT.pdf) —
   Markdown sources in [`paper/`](./paper). They will be regenerated from the full
   LaTeX master once the Overleaf edit is final.
-- Version 30 PDFs are untouched at the project root ([RO](./ATR_12_v30_RO.pdf) etc.).
+- The previous versions (v3, v7, v30) are **not published**. They remain on the
+  author's disk for reference, but are untracked and listed in `.gitignore`.
 
 Version 31 applies the audit: ten numerical statements of v30 are corrected,
 two are downgraded to untestable conjectures, and a structural tension with
@@ -138,8 +139,7 @@ ATR-12/
 ├── figures/                # generated on every run
 ├── results/                # generated, git-ignored
 ├── ATR_12_v31_RO.tex       # full Romanian LaTeX source (Overleaf)
-├── ATR_12_v31_*.pdf        # current papers
-└── ATR_12_v30_*.pdf        # previous version, untouched
+├── ATR_12_v31_*.pdf        # current papers (only version published)
 ```
 
 ## Limitations

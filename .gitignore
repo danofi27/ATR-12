@@ -293,3 +293,16 @@ backup/
 build/
 *.aux
 *.toc
+
+# ============================================================
+# VERSIUNI ISTORICE - NU SE PUBLICĂ (doar v31)
+# Fisierele rămân local, dar nu sunt urmărite de git.
+# ============================================================
+ART-12.pdf
+ART-12.docx
+ART-12D_Ofiteru_2026_v3.docx
+ART-12D_Ofiteru_2026_v3_EN.docx
+ATR_12_v30_*.pdf
+v30.md
+v30.txt
+v7.txt
