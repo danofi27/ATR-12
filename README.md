@@ -1,6 +1,7 @@
 # ART-12D — Akashic Resonance Theory in 12 Dimensions
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23457100.svg)](https://doi.org/10.5281/zenodo.23457100)
+[![CI](https://github.com/danofi27/ATR-12/actions/workflows/ci.yml/badge.svg)](https://github.com/danofi27/ATR-12/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 
 **Archived DOI (v1.0.0):** [10.5281/zenodo.23457100](https://doi.org/10.5281/zenodo.23457100) ·
@@ -139,6 +140,8 @@ ATR-12/
 ├── LICENSE                 # MIT
 ├── PUBLISHING.md           # run, verify, publish
 ├── proiect_ATR-12.MD       # project specification
+├── .github/workflows/ci.yml# CI: pytest + check.py on every push
+├── docs/                   # supporting notes
 ├── paper/                  # v31 sources (RO, EN) + build_paper.py
 ├── src/                    # simulation package
 ├── tests/                  # 31 tests

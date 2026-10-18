@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    name: tests and verification (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.12"]
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Unit tests
+        run: python -m pytest tests -q --no-header
+
+      - name: End-to-end verification
+        run: python check.py --fast
+
+      - name: Check the paper PDFs are present
+        run: |
+          ls -lh ATR_12_v31_*.pdf
+          python - <<'PY'
+          import pathlib
+          import pymupdf
+          papers = sorted(pathlib.Path('.').glob('ATR_12_v31_*.pdf'))
+          assert papers, 'no paper PDFs found'
+          for p in papers:
+              doc = pymupdf.open(str(p))
+              print(f'{p.name}: {doc.page_count} pages')
+              assert doc.page_count > 10, f'{p.name} looks truncated'
+          print('all papers OK')
+          PY
