@@ -76,11 +76,26 @@ The repository is already initialised with a single commit on `main`.
 
 ## 6. Archiving on Zenodo (DOI)
 
-1. Sign in to Zenodo with GitHub.
-2. **Settings → GitHub →** enable the `danofi27/ATR-12` repository.
-3. Create a GitHub release (step 5.2). Zenodo archives it and mints a DOI.
-4. Put the DOI badge in `README.md` and in `CITATION.cff` (`doi:` field).
-5. Add the DOI to the PDF title page in the next build.
+Zenodo only archives releases that are created **after** the repository is enabled
+in its settings, so the existing `v1.0.0` release will not receive a DOI. The order
+matters:
+
+1. Sign in at <https://zenodo.org> with GitHub.
+2. Open <https://zenodo.org/account/settings/github/> and switch `danofi27/ATR-12` to **ON**.
+3. Create a **new** release in this repository (for example `v1.0.1`) with the same
+   PDF assets. Zenodo archives it within a minute and mints a DOI.
+4. Copy the DOI badge from Zenodo and add it to `README.md`:
+
+   ```markdown
+   [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXXX)
+   ```
+
+5. Add the same DOI to `CITATION.cff` (`doi:` field) and to the paper's title page,
+   then rebuild the PDFs.
+
+The metadata Zenodo uses comes from [`.zenodo.json`](./.zenodo.json); edit that file
+and create a new release to update the record. Only `CITATION.cff` and `.zenodo.json`
+are read from the release tag — the PDFs are attached as release assets.
 
 ## 7. Rebuilding the PDFs
 

@@ -1,0 +1,35 @@
+{
+  "title": "ART-12D: Akashic Resonance Theory in 12 Dimensions - simulation code and corrected preprint (v31.0)",
+  "description": "<p>Simulation package accompanying the ART-12D preprint, together with the corrected version 31 of the paper in Romanian, English, German, French, Spanish and Italian.</p><p>The code implements the relations of Part II of the paper: the Kaluza-Klein spectrum (equidistant, m_n = n/R), the tachyonic branch, the akashic field modes, the equation of state of an oscillating scalar field, the Yukawa coupling and its fifth-force bound, the consciousness field with an integrated-information proxy, an EEG hyperscanning model with a full statistical power analysis, and the word-field acoustic coupling.</p><p>It also produces a numerical audit of version 30 of the paper: 5 statements reproduce, 10 are inconsistent with their own definitions, and 2 cannot be tested as written. The audit is regenerated automatically in <code>results/atr12_report.md</code>.</p><p><strong>Epistemic status:</strong> this is a speculative preprint. There is no experimental evidence for the theory. The code does not provide such evidence; it provides a reproducible model, concrete numerical predictions and a list of corrections.</p>",
+  "creators": [
+    {
+      "name": "Ofiteru, Daniel",
+      "affiliation": "Independent Researcher"
+    }
+  ],
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "publication_date": "2026-10-18",
+  "access_right": "open",
+  "license": "MIT",
+  "language": "ron",
+  "version": "1.0.0",
+  "keywords": [
+    "consciousness",
+    "dark matter",
+    "Kaluza-Klein",
+    "integrated information theory",
+    "EEG hyperscanning",
+    "statistical power",
+    "speculative physics",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/danofi27/ATR-12",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ],
+  "notes": "Languages: Romanian (full, 41 pages) and English, German, French, Spanish, Italian (condensed, 19 pages each). Version 30 of the paper is kept in the repository for comparison."
+}
